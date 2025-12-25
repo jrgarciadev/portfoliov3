@@ -1,7 +1,11 @@
-import { Avatar, Link, Separator } from "@heroui/react";
-import { BlogPosts } from "app/components/posts";
+import { Avatar, Separator } from "@heroui/react";
 import Image from "next/image";
-import { EnvelopeIcon, GitHubIcon, TwitterIcon } from "./components/icons";
+import {
+	EnvelopeIcon,
+	GitHubIcon,
+	LinkIcon,
+	TwitterIcon,
+} from "./components/icons";
 import { social } from "./config";
 
 export default function Page() {
@@ -21,14 +25,14 @@ export default function Page() {
 					<h1 className="text-lg font-medium tracking-tight">Junior Garcia</h1>
 					<p className="text-sm font-medium text-muted">
 						Founder & CEO at{" "}
-						<Link
-							className="text-inherit"
+						<a
+							className="link text-inherit"
 							href="https://v3.heroui.com"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							HeroUI
-						</Link>{" "}
+						</a>{" "}
 						(YC S24)
 					</p>
 				</div>
@@ -36,34 +40,32 @@ export default function Page() {
 			<div className="mb-6 space-y-4">
 				<p className="text-base text-wrap">
 					I’m the founder of{" "}
-					<Link
-						className="text-inherit text-base"
+					<a
+						className="link text-inherit text-base"
 						href="https://v3.heroui.com"
 						target="_blank"
-						underline="none"
 						rel="noopener noreferrer"
 					>
 						HeroUI
-					</Link>
+					</a>
 					, a design driven UI ecosystem for building beautiful web and mobile
 					apps. I focus on the intersection of{" "}
 					<em className="font-medium">design</em>,{" "}
-					<em className="font-medium">engineering</em>, and{" "}
+					<em className="font-medium">engineering</em> and{" "}
 					<em className="font-medium">developer experience</em>, building tools
 					that remove UI friction so creators can focus on what matters the
-					most: building their product.
+					most: <em className="font-medium">building the product</em>.
 				</p>
 				<p>
 					Previously I worked at{" "}
-					<Link
+					<a
 						href="https://deel.com"
 						target="_blank"
-						className="text-inherit text-base"
-						underline="none"
+						className="link text-inherit text-base"
 						rel="noopener noreferrer"
 					>
 						Deel
-					</Link>{" "}
+					</a>{" "}
 					as a Frontend Engineer.
 				</p>
 			</div>
@@ -104,7 +106,7 @@ export default function Page() {
 					>
 						<span className="flex items-center gap-1">
 							HeroUI
-							<Link.Icon className="text-muted/60" />
+							<LinkIcon className="text-sm text-muted/60" />
 						</span>
 						<p className="text-sm text-muted">
 							modern UI library for web and mobile, built to help you move fast,
@@ -119,7 +121,7 @@ export default function Page() {
 					>
 						<span className="flex items-center gap-1">
 							Tailwind Variants
-							<Link.Icon className="text-muted/60" />
+							<LinkIcon className="text-sm text-muted/60" />
 						</span>
 						<p className="text-sm text-muted">
 							A powerful variant API for Tailwind CSS, bringing a structured
